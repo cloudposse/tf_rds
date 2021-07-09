@@ -47,3 +47,8 @@ output "resource_id" {
   value       = join("", aws_db_instance.default.*.resource_id)
   description = "The RDS Resource ID of this instance."
 }
+
+output "instance_user" {
+  value       = local.database_user
+  description = "RDS Username for the master DB user"
+}
